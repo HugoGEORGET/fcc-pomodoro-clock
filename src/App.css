@@ -1,0 +1,67 @@
+html,
+body {
+  background-color: teal;
+  color: white;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 1rem 1.3rem;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-title {
+  width: 100%;
+  text-align: center;
+}
+
+#lengths {
+  display: flex;
+}
+
+.commands {
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+#break-configuration {
+  width: 50%;
+}
+
+#break-length {
+  margin: 1rem;
+}
+
+#session-configuration {
+  width: 50%;
+}
+
+#session-length {
+  margin: 1rem;
+}
+
+#timer-label {
+  font-size: 3rem;
+  margin: 1rem;
+  color: goldenrod;
+}
+
+#time-left {
+  font-size: 4rem;
+}
+
+#start_stop,
+#reset {
+  margin: 1rem;
+}

@@ -101,39 +101,50 @@ function App() {
 
   return (
     <main>
-      <section id="break-configuration">
-        <h1 id="break-label">Break length</h1>
-        <button id="break-decrement" onClick={() => breakLengthDown()}>
-          ⬇
-        </button>
-        <output id="break-length">{breakLength}</output>
-        <button id="break-increment" onClick={() => breakLengthUp()}>
-          ⬆
-        </button>
-      </section>
-      <section id="session-configuration">
-        <h1 id="session-label">Session length</h1>
-        <button id="session-decrement" onClick={() => sessionLengthDown()}>
-          ⬇
-        </button>
-        <output id="session-length">{sessionLength}</output>
-        <button id="session-increment" onClick={() => sessionLengthUp()}>
-          ⬆
-        </button>
-      </section>
+      <h1 id="page-title">
+        <code>Pomodoro Clock</code>
+      </h1>
+      <div id="lengths">
+        <section id="break-configuration">
+          <h1 id="break-label">Break length</h1>
+          <div className="commands">
+            <button id="break-decrement" onClick={() => breakLengthDown()}>
+              ⬇
+            </button>
+            <output id="break-length">{breakLength}</output>
+            <button id="break-increment" onClick={() => breakLengthUp()}>
+              ⬆
+            </button>
+          </div>
+        </section>
+        <section id="session-configuration">
+          <h1 id="session-label">Session length</h1>
+          <div className="commands">
+            <button id="session-decrement" onClick={() => sessionLengthDown()}>
+              ⬇
+            </button>
+            <output id="session-length">{sessionLength}</output>
+            <button id="session-increment" onClick={() => sessionLengthUp()}>
+              ⬆
+            </button>
+          </div>
+        </section>
+      </div>
       <section id="timer">
         <h1 id="timer-label">{timerState}</h1>
-        <span id="time-left">{parseSeconds(secondsLeft)}</span>
-        <button id="start_stop" onClick={paused ? startTimer : pauseTimer}>
-          <span role="img" aria-label="start-stop">
-            ⏯
-          </span>
-        </button>
-        <button id="reset" onClick={() => resetTimer()}>
-          <span role="img" aria-label="reset">
-            🔄
-          </span>
-        </button>
+        <span id="time-left">
+          <code>{parseSeconds(secondsLeft)}</code>
+        </span>
+        <div className="commands">
+          <button id="start_stop" onClick={paused ? startTimer : pauseTimer}>
+            <span role="img" aria-label="start-stop">
+              ⏯
+            </span>
+          </button>
+          <button id="reset" onClick={() => resetTimer()}>
+            Reset
+          </button>
+        </div>
       </section>
       <audio id="beep" preload="auto" src="https://goo.gl/65cBl1" />
     </main>
